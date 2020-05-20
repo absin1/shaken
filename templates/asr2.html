@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>AmplitudeJS Testing</title>
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/asr.css">
+
+<body>
+
+    <div id="flat-black-player-container">
+        <div id="list-screen" class="slide-in-top" style="display: block;">
+            <div id="list-screen-header" class="hide-playlist">
+
+            </div>
+            <div class="input-group">
+              <div class="input-group-icon">
+                  <input type="number" value=0 id="page"/>
+                  <input type="number" value=15 id="page_size" style="display:none">
+              </div>
+              <div class="input-group-area">
+                  <input type="text" value="" id="search">
+              </div>
+              <div class="input-group-icon" onclick="fetchSnippets()">Submit</div>
+            </div>
+            <div id="list" style="height: 597px;" onscroll="scrolled(this)">
+
+            </div>
+
+            <div id="list-screen-footer">
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script type="text/javascript" src="/assets/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/assets/mustache.min.js"></script>
+    <script type="text/javascript" src="/assets/asr.js"></script>
+</body>
+
+</html>

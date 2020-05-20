@@ -1,0 +1,25 @@
+
+{{#snippets}}
+<div class="song amplitude-song-container amplitude-play-pause amplitude-paused" data-amplitude-song-index="{{path}}"
+    onclick="play('{{sid}}')">
+    <span class="song-number-now-playing">
+        <span class="number">{{index}}</span>
+        <img class="now-playing" src="/assets/now-playing.svg">
+    </span>
+    <div class="song-meta-container">
+        <span class="song-name" data-amplitude-song-info="name" data-amplitude-song-index="0"
+            contenteditable=true>{{sid }}</span>
+        <span class="song-artist-album"><span data-amplitude-song-info="artist"
+                data-amplitude-song-index="0">{{sid}}</span> - <span data-amplitude-song-info="album"
+                data-amplitude-song-index="0">{{from_time}} {{speaker}}</span>
+    </div>
+    <span class="song-duration">
+        <span>
+        </span>
+        <button onclick="like({{sid}})" style="cursor: pointer;">Y</button>
+        <button onclick="delete_snippet({{sid}})" style="cursor: pointer;">D</button>
+    </span>
+</div>
+<div snippet="{{sid}}" class="progress-barzz" style="background-color: darkred;width: 0%;height: 5px;" onclick="changeaudioduration()"></div>
+{{/snippets}}
+{{^snippets}}No snippets :({{/snippets}}
